@@ -15,22 +15,22 @@
         <div id="smooth-content">
             <main>
                 <div class="section-bg hero-bg background-image"
-                    style="background-image: url('assets/images/hero/home-1/hero-bg.png');">
+                    style="background-image: url('{{ asset('assets/images/hero/home-1/hero-bg.png') }}');">
                     <!-- Start Hero Area -->
                     <section class="ed-hero">
                         <div class="container ed-container-expand">
                             <!-- Hero Element Shape -->
                             <div class="ed-hero__elements">
-                                <img class="element-move ed-hero__shape-1" src="assets/images/hero/home-1/shape-1.svg"
-                                    alt="shape-1" />
-                                <img class="element-move ed-hero__shape-2" src="assets/images/hero/home-1/shape-2.svg"
-                                    alt="shape-1" />
-                                <img class="element-move ed-hero__shape-3" src="assets/images/hero/home-1/shape-3.svg"
-                                    alt="shape-1" />
-                                <img class="element-move ed-hero__shape-4" src="assets/images/hero/home-1/shape-4.svg"
-                                    alt="shape-1" />
-                                <img class="element-move ed-hero__shape-5" src="assets/images/hero/home-1/shape-5.png"
-                                    alt="shape-5" />
+                                <img class="element-move ed-hero__shape-1"
+                                    src="{{ asset('assets/images/hero/home-1/shape-1.svg') }}" alt="shape-1" />
+                                <img class="element-move ed-hero__shape-2"
+                                    src="{{ asset('assets/images/hero/home-1/shape-2.svg') }}" alt="shape-1" />
+                                <img class="element-move ed-hero__shape-3"
+                                    src="{{ asset('assets/images/hero/home-1/shape-3.svg') }}" alt="shape-1" />
+                                <img class="element-move ed-hero__shape-4"
+                                    src="{{ asset('assets/images/hero/home-1/shape-4.svg') }}" alt="shape-1" />
+                                <img class="element-move ed-hero__shape-5"
+                                    src="{{ asset('assets/images/hero/home-1/shape-5.png') }}" alt="shape-5" />
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-12">
@@ -52,7 +52,7 @@
                                 <div class="col-lg-6 col-12">
                                     <!-- Hero Image -->
                                     <div class="ed-hero__image">
-                                        <img src="assets/images/hero/home-1/hero-img.png" alt="hero-img" />
+                                        <img src="{{ asset('assets/images/hero/home-1/hero-img.png') }}" alt="hero-img" />
                                     </div>
                                 </div>
                             </div>
@@ -296,15 +296,16 @@
                         <div class="ed-call-action__inner ed-call-action__inner--style2">
                             <div class="ed-call-action__shapes">
                                 <img class="ed-call-action__shape-1"
-                                    src="assets/images/abstracts/abstract-element-regular.svg"
+                                    src="{{ asset('assets/images/abstracts/abstract-element-regular.svg') }}"
                                     alt="abstract-element-regular" />
-                                <img class="ed-call-action__shape-2" src="assets/images/abstracts/abstract-dot-4.svg"
+                                <img class="ed-call-action__shape-2"
+                                    src="{{ asset('assets/images/abstracts/abstract-dot-4.svg') }}"
                                     alt="abstract-dot-4" />
                                 <img class="ed-call-action__shape-3"
-                                    src="assets/images/abstracts/abstract-element-regular.svg"
+                                    src="{{ asset('assets/images/abstracts/abstract-element-regular.svg') }}"
                                     alt="abstract-element-regular" />
                                 <img class="ed-call-action__shape-4"
-                                    src="assets/images/abstracts/abstract-orange-plus-1.svg"
+                                    src="{{ asset('assets/images/abstracts/abstract-orange-plus-1.svg') }}"
                                     alt="abstract-orange-plus-1" />
                             </div>
                             <div class="row">
@@ -666,7 +667,7 @@
 
 
                 <section class="ed-apply background-image"
-                    style="background-image: url('{{ asset('assets/images/apply/bg-img.png') }}');">
+                    style="background-image: url('{{ asset('assets/images/apply/bg-img.jpg') }}');">
                     <div class="container ed-container">
                         <div class="row">
                             <div class="col-lg-7 col-12">
@@ -706,7 +707,8 @@
                                                 <div class="col-lg-6 col-12">
                                                     <div class="form-group mb-3">
                                                         <input type="tel" id="number" name="phone"
-                                                            placeholder="Phone" maxlength="10" value="{{ old('phone') }}" required />
+                                                            placeholder="Phone" maxlength="10"
+                                                            value="{{ old('phone') }}" required />
                                                         @error('phone')
                                                             <span class="text-danger d-block mt-1"
                                                                 style="font-size: 13px; font-weight:500;">{{ $message }}</span>
@@ -788,74 +790,18 @@
                                 <!-- Testimonial Slider  -->
                                 <div class="swiper ed-testimonial__slider-3">
                                     <div class="swiper-wrapper">
-                                        <!-- Single Testimonial  -->
-                                        <div class="swiper-slide">
-                                            <div class="ed-testimonial__slider-item">
-                                                <div class="ed-testimonial__author">
-                                                    <div class="ed-testimonial__author-img">
-                                                        <img src="assets/images/testimonial/testimonial-3/author-1.png"
-                                                            alt="author-img" />
-                                                    </div>
-                                                    <div class="ed-testimonial__author-info">
-                                                        <h5>Aman Sharma</h5>
-                                                        <p>Diploma in Fire & Safety</p>
-                                                    </div>
-                                                </div>
-                                                <ul class="ed-testimonial__rattings">
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                </ul>
-                                                <p class="ed-testimonial__text">
-                                                    "NART gave me the right skills and confidence to start my career in Fire
-                                                    & Safety.
-                                                    The practical training was extremely useful and helped me secure a job
-                                                    quickly."
-                                                </p>
-                                            </div>
-                                        </div>
 
                                         <!-- Single Testimonial  -->
                                         <div class="swiper-slide">
                                             <div class="ed-testimonial__slider-item">
                                                 <div class="ed-testimonial__author">
                                                     <div class="ed-testimonial__author-img">
-                                                        <img src="assets/images/testimonial/testimonial-3/author-2.png"
+                                                        <img src="assets/images/testimonial/testimonial-3/SHUBHAM SANDHA.jpeg"
                                                             alt="author-img" />
                                                     </div>
                                                     <div class="ed-testimonial__author-info">
-                                                        <h5>Priya Verma</h5>
-                                                        <p>Computer Applications</p>
-                                                    </div>
-                                                </div>
-                                                <ul class="ed-testimonial__rattings">
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                    <li><i class="icofont-star"></i></li>
-                                                </ul>
-                                                <p class="ed-testimonial__text">
-                                                    "The teachers at NART are very supportive and knowledgeable.
-                                                    I learned both theoretical and practical aspects of IT, which made me
-                                                    job-ready."
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Single Testimonial  -->
-                                        <div class="swiper-slide">
-                                            <div class="ed-testimonial__slider-item">
-                                                <div class="ed-testimonial__author">
-                                                    <div class="ed-testimonial__author-img">
-                                                        <img src="assets/images/testimonial/testimonial-3/author-3.png"
-                                                            alt="author-img" />
-                                                    </div>
-                                                    <div class="ed-testimonial__author-info">
-                                                        <h5>Rohit Kumar</h5>
-                                                        <p>Paramedical Sciences</p>
+                                                        <h5>SHUBHAM SANDHA</h5>
+                                                        <p>DIPLOMA IN MECHANICAL ENGINEERING </p>
                                                     </div>
                                                 </div>
                                                 <ul class="ed-testimonial__rattings">
@@ -867,7 +813,7 @@
                                                 </ul>
                                                 <p class="ed-testimonial__text">
                                                     "I’m grateful to NART for providing such a professional course in
-                                                    Paramedical Science.
+                                                   DIPLOMA IN MECHANICAL ENGINEERING.
                                                     The hands-on practice sessions were very helpful for my future career."
                                                 </p>
                                             </div>
@@ -878,12 +824,12 @@
                                             <div class="ed-testimonial__slider-item">
                                                 <div class="ed-testimonial__author">
                                                     <div class="ed-testimonial__author-img">
-                                                        <img src="assets/images/testimonial/testimonial-3/author-2.png"
+                                                        <img src="assets/images/testimonial/testimonial-3/simran.jpeg"
                                                             alt="author-img" />
                                                     </div>
                                                     <div class="ed-testimonial__author-info">
                                                         <h5>Simran Kaur</h5>
-                                                        <p>Management Study</p>
+                                                        <p>DIPLOMA IN NURSING ASSISTANT</p>
                                                     </div>
                                                 </div>
                                                 <ul class="ed-testimonial__rattings">
@@ -905,12 +851,12 @@
                                             <div class="ed-testimonial__slider-item">
                                                 <div class="ed-testimonial__author">
                                                     <div class="ed-testimonial__author-img">
-                                                        <img src="assets/images/testimonial/testimonial-3/author-2.png"
+                                                        <img src="assets/images/testimonial/testimonial-3/dinesh.jpeg"
                                                             alt="author-img" />
                                                     </div>
                                                     <div class="ed-testimonial__author-info">
-                                                        <h5>Deepak Yadav</h5>
-                                                        <p>Vocational Diploma</p>
+                                                        <h5>Dinesh</h5>
+                                                        <p>GERMAN A2</p>
                                                     </div>
                                                 </div>
                                                 <ul class="ed-testimonial__rattings">
@@ -921,7 +867,88 @@
                                                     <li><i class="icofont-star"></i></li>
                                                 </ul>
                                                 <p class="ed-testimonial__text">
-                                                    "NART’s vocational programs are truly job-oriented.
+                                                    "NART’s GERMAN A2 programs are truly job-oriented.
+                                                    I gained practical exposure that made me confident to start working
+                                                    immediately."
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Single Testimonial  -->
+                                        <div class="swiper-slide">
+                                            <div class="ed-testimonial__slider-item">
+                                                <div class="ed-testimonial__author">
+                                                    <div class="ed-testimonial__author-img">
+                                                        <img src="assets/images/testimonial/testimonial-3/DARSHAN SINGH.jpeg"
+                                                            alt="author-img" />
+                                                    </div>
+                                                    <div class="ed-testimonial__author-info">
+                                                        <h5>DARSHAN SINGH</h5>
+                                                        <p>DIPLOMA IN FITTER MECHANIC </p>
+                                                    </div>
+                                                </div>
+                                                <ul class="ed-testimonial__rattings">
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                </ul>
+                                                <p class="ed-testimonial__text">
+                                                    "NART’s DIPLOMA IN FITTER MECHANIC  programs are truly job-oriented.
+                                                    I gained practical exposure that made me confident to start working
+                                                    immediately."
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Single Testimonial  -->
+                                        <div class="swiper-slide">
+                                            <div class="ed-testimonial__slider-item">
+                                                <div class="ed-testimonial__author">
+                                                    <div class="ed-testimonial__author-img">
+                                                        <img src="assets/images/testimonial/testimonial-3/manju rani.jpeg"
+                                                            alt="author-img" />
+                                                    </div>
+                                                    <div class="ed-testimonial__author-info">
+                                                        <h5>Manju Rani</h5>
+                                                        <p>DIPLOMA IN COMPUTER APPLICATIONS  </p>
+                                                    </div>
+                                                </div>
+                                                <ul class="ed-testimonial__rattings">
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                </ul>
+                                                <p class="ed-testimonial__text">
+                                                    "NART’s DIPLOMA IN COMPUTER APPLICATIONS  programs are truly job-oriented.
+                                                    I gained practical exposure that made me confident to start working
+                                                    immediately."
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Single Testimonial  -->
+                                        <div class="swiper-slide">
+                                            <div class="ed-testimonial__slider-item">
+                                                <div class="ed-testimonial__author">
+                                                    <div class="ed-testimonial__author-img">
+                                                        <img src="assets/images/testimonial/testimonial-3/sumit kumar.jpeg"
+                                                            alt="author-img" />
+                                                    </div>
+                                                    <div class="ed-testimonial__author-info">
+                                                        <h5>Sumit Kumar</h5>
+                                                        <p>DIPLOMA IN COMPUTER APPLICATION  </p>
+                                                    </div>
+                                                </div>
+                                                <ul class="ed-testimonial__rattings">
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                    <li><i class="icofont-star"></i></li>
+                                                </ul>
+                                                <p class="ed-testimonial__text">
+                                                    "NART’s DIPLOMA IN COMPUTER APPLICATION  programs are truly job-oriented.
                                                     I gained practical exposure that made me confident to start working
                                                     immediately."
                                                 </p>
@@ -940,76 +967,6 @@
                     </div>
                 </section>
                 <!-- End Testimonial Area -->
-
             </main>
 
-            <div class="modal fade ed-welcome-modal" id="welcomeModal" tabindex="-1"
-                aria-labelledby="welcomeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content border-0 overflow-hidden">
-                        <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                            aria-label="Close">
-                            <i class="fi fi-rr-cross"></i>
-                        </button>
-
-                        <div class="row g-0">
-                            <div class="col-md-5 d-none d-md-block" style="background-color: #f5f9ff;">
-                                <img src="{{ asset('assets/images/call-action/call-action-1/call-action-img.png') }}"
-                                    class="img-fluid h-100" style="object-fit: cover;" alt="NART Admission">
-                            </div>
-
-                            <div class="col-md-7">
-                                <div class="modal-body p-5 text-center text-md-start">
-                                    <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill"
-                                        style="letter-spacing: 1px;">Inquiry Open</span>
-
-                                    <h3 class="fw-bold mb-3" style="color: #2c3a4b;">Welcome to NART!</h3>
-
-                                    <p class="text-muted mb-4" style="font-size: 14px;">
-                                        Have a question or want to join our courses? Fill out the form below and our team
-                                        will get back to you shortly.
-                                    </p>
-
-                                    <form action="#" method="post">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <input type="text" name="name"
-                                                    class="form-control mb-3 custom-modal-input" placeholder="Full Name"
-                                                    required>
-                                            </div>
-                                            <div class="col-12">
-                                                <input type="email" name="email"
-                                                    class="form-control mb-3 custom-modal-input"
-                                                    placeholder="Email Address" required>
-                                            </div>
-                                            <div class="col-12">
-                                                <input type="tel" name="phone"
-                                                    class="form-control mb-3 custom-modal-input"
-                                                    placeholder="Phone Number" required>
-                                            </div>
-                                            <div class="col-12">
-                                                <input type="text" name="subject"
-                                                    class="form-control mb-4 custom-modal-input"
-                                                    placeholder="Subject / Course Interested In" required>
-                                            </div>
-                                        </div>
-
-                                        <button type="submit" class="ed-btn w-100 text-center justify-content-center"
-                                            style="border-radius: 8px;">
-                                            Submit Inquiry <i class="fi fi-rr-paper-plane"></i>
-                                        </button>
-                                    </form>
-
-                                    <div class="text-center mt-3">
-                                        <a href="javascript:void(0)" data-bs-dismiss="modal"
-                                            class="text-decoration-none text-muted" style="font-size: 13px;">
-                                            <u>No thanks, I will explore first</u>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         @endsection

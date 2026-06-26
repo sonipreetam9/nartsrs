@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    
+
     public function Index()
     {
         return view('index');
@@ -17,5 +17,14 @@ class IndexController extends Controller
         return view('training-placement');
     }
 
+    public function NetworkIndex()
+    {
+        return view('network');
+    }
+
+    public function GalleryIndex()
+    {
+        return view('gallery');
+    }
 
 }

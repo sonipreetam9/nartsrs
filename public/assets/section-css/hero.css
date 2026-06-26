@@ -1794,3 +1794,264 @@
         .franchisee-custom-nav button:hover {
             background-color: #065b9e;
         }
+
+        /* Section Background - Soft greyish blue to make white cards pop */
+        .ed-network-area {
+            padding-top: 100px;
+            padding-bottom: 70px;
+            background-color: #f9fbff;
+            position: relative;
+        }
+
+        /* Premium Card Design */
+        .premium-network-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(11, 28, 57, 0.04);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border-bottom: 3px solid transparent;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+            /* EQUAL HEIGHT FIX */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hover Effects */
+        .premium-network-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid #ff5e14;
+            box-shadow: 0 15px 45px rgba(11, 28, 57, 0.1);
+        }
+
+        /* The Icon Box - Centered and stylized */
+        .premium-network-card .icon-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px auto;
+            background: rgba(255, 94, 20, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff5e14;
+            transition: all 0.5s ease;
+        }
+
+        .premium-network-card:hover .icon-box {
+            background: #ff5e14;
+            color: #ffffff;
+        }
+
+        .premium-network-card .icon-box svg {
+            width: 35px;
+            height: auto;
+        }
+
+        /* Typography */
+        .premium-network-card h4 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0b1c39;
+            margin-bottom: 15px;
+            transition: all 0.5s ease;
+        }
+
+        .premium-network-card p {
+            font-size: 15px;
+            color: #4a5a73;
+            margin-bottom: 6px;
+            font-weight: 500;
+            line-height: 1.6;
+            transition: all 0.5s ease;
+        }
+
+        /* Background Watermark Icon (Agency Feel) */
+        .premium-network-card .watermark {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            opacity: 0.03;
+            color: #0b1c39;
+            z-index: -1;
+            transition: all 0.5s ease;
+            transform: rotate(-15deg);
+        }
+
+        .premium-network-card:hover .watermark {
+            opacity: 0.08;
+            color: #ff5e14;
+            transform: rotate(0deg) scale(1.1);
+        }
+        /* =========================================
+               HOVER EFFECTS (THE MAGIC HAPPENS HERE)
+               ========================================= */
+        .premium-network-card:hover {
+            transform: translateY(-12px);
+            background-color: #0b1c39;
+            box-shadow: 0 20px 40px rgba(11, 28, 57, 0.2);
+            border-bottom: 3px solid #ff5e14;
+        }
+
+        .premium-network-card:hover .icon-box {
+            background-color: #ff5e14;
+            color: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 94, 20, 0.3);
+        }
+
+        .premium-network-card:hover h4 {
+            color: #ffffff;
+        }
+
+        .premium-network-card:hover p {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .premium-network-card:hover .watermark {
+            opacity: 0.08;
+            color: #ffffff;
+            transform: rotate(0deg) scale(1.1);
+        }        
+
+
+                /* Section Background */
+        .ed-gallery-area {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #ffffff;
+        }
+
+        /* Modern CSS Grid for perfect alignment */
+        .premium-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        /* Gallery Item Card */
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            /* Keeps all images in exact same shape/height */
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            background-color: #f0f4f8;
+            /* Placeholder color */
+        }
+
+        /* Image Styling with Smooth Zoom */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            /* Image zooms in on hover */
+        }
+
+        /* The Premium Dark Gradient Overlay */
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            /* Covers the whole image */
+            background: linear-gradient(to top, rgba(11, 28, 57, 0.95) 0%, rgba(11, 28, 57, 0.4) 50%, rgba(11, 28, 57, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Eye Icon */
+        .gallery-overlay-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ff5e14;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            margin-bottom: 15px;
+
+            /* Animation Starting Point */
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-overlay-icon svg {
+            width: 24px;
+            height: auto;
+        }
+
+        /* Text Animation */
+        .gallery-overlay-text h4 {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            transition-delay: 0.1s;
+            /* Staggered effect */
+        }
+
+        .gallery-overlay-text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 15px;
+            font-weight: 500;
+            margin: 0;
+
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            transition-delay: 0.2s;
+            /* Staggered effect */
+        }
+
+        /* Triggering the up-slide animation on hover */
+        .gallery-item:hover .gallery-overlay-icon,
+        .gallery-item:hover .gallery-overlay-text h4,
+        .gallery-item:hover .gallery-overlay-text p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .premium-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 Columns on Tablet */
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .premium-gallery-grid {
+                grid-template-columns: 1fr;
+                /* 1 Column on Mobile */
+            }
+        }

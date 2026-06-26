@@ -16,7 +16,7 @@
                 <div class="section-bg hero-bg">
                     <!-- Start Bredcrumbs Area -->
                     <section class="ed-breadcrumbs background-image"
-                        style="background-image: url('assets/images/breadcrumbs-bg.png');">
+                        style="background-image: url('{{ asset('assets/images/breadcrumbs-bg.png') }}');">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -43,7 +43,7 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="ed-contact__card-item">
                                     <div class="ed-contact__card-icon">
-                                        <img src="assets/images/icons/icon-white-phone.svg" alt="icon-white-phone" />
+                                        <img src="{{ asset('assets/images/icons/icon-white-phone.svg') }}" alt="icon-white-phone" />
                                     </div>
                                     <div class="ed-contact__card-info">
                                         <a href="tel:{{ $CompanyPhone1 }}">+91 {{ $CompanyPhone1 }}</a>
@@ -69,7 +69,7 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="ed-contact__card-item">
                                     <div class="ed-contact__card-icon">
-                                        <img src="assets/images/icons/icon-white-map.svg" alt="icon-white-phone" />
+                                        <img src="{{ asset('assets/images/icons/icon-white-map.svg') }}" alt="icon-white-phone" />
                                     </div>
                                     <div class="ed-contact__card-info">
                                         <a href="#" target="_blank">

@@ -126,7 +126,7 @@
                 <!-- End Course Area -->
 
                 <!-- Start Partner Area -->
-                <section class="ed-partner section-gap section-bg-color-1">
+                <section class="ed-partner section-gap">
                     <div class="container ed-container">
                         <div class="row">
                             <div class="col-12">

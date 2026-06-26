@@ -1,19 +1,19 @@
 <!-- Start Call Action Area -->
-<section class="ed-call-action position-relative">
+{{-- <section class="ed-call-action position-relative">
     <div class="container ed-container">
         <div class="ed-call-action__inner position-relative">
             <div class="ed-call-action__shapes">
-                <img class="ed-call-action__shape-1 rotate-ani" src="assets/images/call-action/call-action-1/shape-1.svg"
+                <img class="ed-call-action__shape-1 rotate-ani" src="{{ asset('assets/images/call-action/call-action-1/shape-1.svg') }}"
                     alt="shape-1" />
-                <img class="ed-call-action__shape-2" src="assets/images/call-action/call-action-1/shape-2.svg"
+                <img class="ed-call-action__shape-2" src="{{ asset('assets/images/call-action/call-action-1/shape-2.svg') }}"
                     alt="shape-2" />
                 <img class="ed-call-action__shape-3 updown-ani"
-                    src="assets/images/call-action/call-action-1/shape-3.svg" alt="shape-3" />
+                    src="{{ asset('assets/images/call-action/call-action-1/shape-3.svg') }}" alt="shape-3" />
             </div>
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="ed-call-action__img">
-                        <img src="assets/images/call-action/call-action-1/call-action-img.png" alt="NART Students" />
+                        <img src="{{ asset('assets/images/call-action/call-action-1/call-action-img.png') }}" alt="NART Students" />
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 order-class">
@@ -40,16 +40,99 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- End Call Action Area -->
+
+<!-- Start Register Modal -->
+<div class="modal fade ed-auth__modal" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="ed-auth__modal-content modal-content">
+            <button type="button" class="ed-auth__modal-close" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fi-rr-cross"></i>
+            </button>
+
+            <!-- Auth Head  -->
+            <div class="ed-auth__modal-head">
+                <a href="index.html" class="ed-auth__modal-logo">
+                    <img src="assets/images/logo.svg" alt="logo" />
+                </a>
+                <h3 class="ed-auth__modal-title">Sign Up Now</h3>
+                <p class="ed-auth__modal-text">
+                    already have an account?
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Sign In
+                    </button>
+                </p>
+            </div>
+
+            <!-- Auth Body  -->
+            <div class="ed-auth__modal-body">
+                <form action="#" method="post" class="ed-auth__modal-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Enter name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="user name" placeholder="Enter user name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Enter email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Enter password" required />
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label" for="flexCheckDefault2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+                            I agree with your <strong>Privacy Policy</strong>
+                        </label>
+                    </div>
+                    <div class="ed-auth__form-btn">
+                        <button type="submit" class="ed-btn">Register Now<i
+                                class="fi fi-rr-arrow-small-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            <!-- Auth Footer  -->
+            <div class="ed-auth__modal-footer">
+                <div class="ed-auth__modal-third-party">
+                    <p>Or Sign Up with</p>
+                    <ul class="ed-auth__modal-third-party-list">
+                        <li>
+                            <a class="google-login" href="https://www.google.com/"><img
+                                    src="assets/images/icons/icon-color-google.svg" alt="icon-color-google" /></a>
+                        </li>
+
+                        <li>
+                            <a class="facebook-login" href="https://facebook.com/"><img
+                                    src="assets/images/icons/icon-color-facebook.svg" alt="icon-color-facebook" /></a>
+                        </li>
+                        <li>
+                            <a class="linkedin-login" href="https://www.linkedin.com/"><img
+                                    src="assets/images/icons/icon-color-linkedin.svg" alt="icon-color-linkedin" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Register Modal -->
 
 <!-- Start Footer Area -->
 <footer class="ed-footer section-bg-color-1 position-relative">
     <div class="ed-footer__top position-relative">
         <div class="ed-footer__shapes">
-            <img class="ed-footer__shape-1" src="assets/images/footer/footer-1/shape-1.svg" alt="shape-1" />
-            <img class="ed-footer__shape-2 rotate-ani" src="assets/images/footer/footer-1/shape-2.svg" alt="shape-2" />
-            <img class="ed-footer__shape-3" src="assets/images/footer/footer-1/shape-3.svg" alt="shape-3" />
+            <img class="ed-footer__shape-1" src="{{ asset('assets/images/footer/footer-1/shape-1.svg') }}"
+                alt="shape-1" />
+            <img class="ed-footer__shape-2 rotate-ani" src="{{ asset('assets/images/footer/footer-1/shape-2.svg') }}"
+                alt="shape-2" />
+            <img class="ed-footer__shape-3" src="{{ asset('assets/images/footer/footer-1/shape-3.svg') }}"
+                alt="shape-3" />
         </div>
         <div class="container ed-container">
             <div class="row g-0">
@@ -81,7 +164,9 @@
                         <ul class="ed-footer__widget-links">
                             <li><a href="{{ route('about') }}">About Us</a></li>
                             <li><a href="{{ route('courses') }}">Courses</a></li>
+                            <li><a href="{{ route('gallery') }}">Gallery</a></li>
                             <li><a href="{{ route('training.placement') }}">Training and Placement</a></li>
+                            <li><a href="{{ route('network') }}">Training and Placement</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                         </ul>
                     </div>
@@ -109,12 +194,13 @@
                             </div>
                             <div class="ed-footer__contact-info">
                                 <span>24/7 Support</span>
-                                <a href="tel:{{ $CompanyPhone1 }}">{{ $CompanyPhone1 }}</a>
+                                <a href="tel:{{ $CompanyPhone1 }}">+91 {{ $CompanyPhone1 }}</a>
                             </div>
                         </div>
                         <div class="ed-footer__contact">
                             <div class="ed-footer__contact-icon">
-                                <img src="{{ asset('assets/images/icons/icon-envelope-blue.svg') }}" alt="envelope" />
+                                <img src="{{ asset('assets/images/icons/icon-envelope-blue.svg') }}"
+                                    alt="envelope" />
                             </div>
                             <div class="ed-footer__contact-info">
                                 <span>Send Message</span>
@@ -123,7 +209,8 @@
                         </div>
                         <div class="ed-footer__contact">
                             <div class="ed-footer__contact-icon">
-                                <img src="{{ asset('assets/images/icons/icon-location-blue.svg') }}" alt="location" />
+                                <img src="{{ asset('assets/images/icons/icon-location-blue.svg') }}"
+                                    alt="location" />
                             </div>
                             <div class="ed-footer__contact-info">
                                 <span>Our Location</span>
@@ -150,72 +237,6 @@
 </footer>
 <!-- End Footer Area -->
 
-<!-- Start Sidebar -->
-<div class="offcanvas offcanvas-end ed-sidebar" tabindex="-1" id="edSidebar" aria-labelledby="offcanvasRightLabel">
-    <div class="ed-sidebar-header">
-        <a href="404-2.html" class="ed-sidebar-logo">
-            <img src="{{ asset('assets/images/logo.png') }}" alt="logo" />
-        </a>
-        <button type="button" class="text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
-            <i class="fi fi-rr-cross"></i>
-        </button>
-    </div>
-    <div class="ed-sidebar-body m-0">
-        <div class="ed-sidebar-widget">
-            <h3 class="ed-sidebar-widget-title">Contacts Us:</h3>
-            <div class="ed-contact__info-item">
-                <div class="ed-contact__info-icon">
-                    <img src="{{ asset('assets/images/icons/icon-phone-blue.svg') }}" alt="phone" />
-                </div>
-                <div class="ed-contact__info-content">
-                    <span>24/7 Support</span>
-                    <a href="tel:{{ $CompanyPhone1 }}">{{ $CompanyPhone1 }}</a>
-                </div>
-            </div>
-            <div class="ed-contact__info-item">
-                <div class="ed-contact__info-icon">
-                    <img src="{{ asset('assets/images/icons/icon-envelope-blue.svg') }}" alt="envelope" />
-                </div>
-                <div class="ed-contact__info-content">
-                    <span>Send Message</span>
-                    <a href="mailto:{{ $CompanyEmail }}">{{ $CompanyEmail }}</a>
-                </div>
-            </div>
-            <div class="ed-contact__info-item">
-                <div class="ed-contact__info-icon">
-                    <img src="{{ asset('assets/images/icons/icon-location-blue.svg') }}" alt="location" />
-                </div>
-                <div class="ed-contact__info-content">
-                    <span>Our Location</span>
-                    <a href="{{ $CompanyURL }}" target="_blank">{{ $CompanyAddress }}</a>
-                </div>
-            </div>
-        </div>
-        <div class="ed-sidebar-widget">
-            <h3 class="ed-sidebar-widget-title">Follow Us:</h3>
-            <ul class="ed-sidebar-social">
-                <li><a href="{{ $CompanyFacebook }}" target="_blank"><img
-                            src="{{ asset('assets/images/icons/icon-dark-facebook.svg') }}" alt="facebook" /></a>
-                </li>
-                <li><a href="{{ $CompanyTwitter }}" target="_blank"><img
-                            src="{{ asset('assets/images/icons/icon-dark-twitter.svg') }}" alt="twitter" /></a></li>
-                <li><a href="{{ $CompanyInstagram }}" target="_blank"><img
-                            src="{{ asset('assets/images/icons/icon-dark-instagram.svg') }}" alt="instagram" /></a>
-                </li>
-                <li><a href="{{ $CompanyYoutube }}" target="_blank"><img
-                            src="{{ asset('assets/images/icons/icon-dark-youtube.svg') }}" alt="youtube" /></a></li>
-            </ul>
-        </div>
-        <div class="ed-sidebar-widget">
-            <h3 class="ed-sidebar-widget-title">Subscribe Now:</h3>
-            <form action="#" method="post" class="ed-sidebar-subscribe">
-                <input type="email" name="email-address" placeholder="Enter email" required />
-                <button type="submit" class="ed-btn">Subscribe<i class="fi fi-rr-arrow-small-right"></i></button>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- End Sidebar -->
 
 <!-- Start Back To Top -->
 <div class="progress-wrap">
@@ -226,7 +247,6 @@
 <!-- End Back To Top -->
 
 <!-- Jquery JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="{{ asset('assets/plugins/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/js/jquery-migrate.js') }}"></script>
 <script src="{{ asset('assets/plugins/js/bootstrap.min.js') }}"></script>
@@ -289,10 +309,7 @@
         var selectField = document.querySelector(".goog-te-combo");
 
         if (selectField) {
-            // Change its value to the selected language
             selectField.value = lang;
-
-            // Trigger the 'change' event to apply translation INSTANTLY
             selectField.dispatchEvent(new Event("change"));
         }
 
@@ -333,6 +350,7 @@
         }
     });
 </script>
+
 
 </body>
 

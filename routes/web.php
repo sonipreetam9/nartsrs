@@ -75,6 +75,9 @@ Route::post('/franchisee-registration.html', [FranchiseeController::class, 'Fran
 Route::get('/view-franchisee.html', [FranchiseeController::class, 'FranchiseList'])->name('view.franchisee');
 
 Route::get('/training-placement.html', [IndexController::class, 'TraningPlacementIndex'])->name('training.placement');
+Route::get('/network.html', [IndexController::class, 'NetworkIndex'])->name('network');
+Route::get('/gallery.html', [IndexController::class, 'GalleryIndex'])->name('gallery');
 
+// ***************** Contact Route ******************* //
 Route::get('/contact.html', [ContactController::class, 'ContactIndex'])->name('contact');
 Route::post('/contact.html', [ContactController::class, 'ContactPost'])->name('contact.form.post');

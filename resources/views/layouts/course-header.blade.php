@@ -26,13 +26,13 @@
 
 <body class="element-wrapper">
     <!-- Start Preloader  -->
-    {{-- <div id="preloader">
+    <div id="preloader">
         <div id="ed-preloader" class="ed-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- End Preloader -->
 
     <!-- Custom Cursor Start -->
@@ -114,8 +114,8 @@
                                             Result</a>
                                     </li>
                                     <li class="offcanvas__sub_menu_li">
-                                        <a href="{{ route('student.result') }}" class="offcanvas__sub_menu_item">View
-                                            Result</a>
+                                        <a href="{{ route('gallery') }}" class="offcanvas__sub_menu_item">Gallery
+                                        </a>
                                     </li>
                                     <li class="offcanvas__sub_menu_li">
                                         <a href="{{ asset('assets/images/admision-form.pdf') }}" target="_blank"
@@ -127,10 +127,12 @@
                                 <a class="offcanvas__menu_item" href="#">Franchisee</a>
                                 <ul class="offcanvas__sub_menu">
                                     <li class="offcanvas__sub_menu_li">
-                                        <a href="{{ route('view.franchisee') }}" class="offcanvas__sub_menu_item">View Franchisee</a>
+                                        <a href="{{ route('view.franchisee') }}"
+                                            class="offcanvas__sub_menu_item">View Franchisee</a>
                                     </li>
                                     <li class="offcanvas__sub_menu_li">
-                                        <a href="{{ asset('institute_admin/index.php') }}" class="offcanvas__sub_menu_item">Franchisee Login</a>
+                                        <a href="{{ asset('institute_admin/index.php') }}"
+                                            class="offcanvas__sub_menu_item">Franchisee Login</a>
                                     </li>
                                     <li class="offcanvas__sub_menu_li">
                                         <a href="{{ route('franchisee.registration') }}"
@@ -139,23 +141,20 @@
                                 </ul>
                             </li>
 
-                            {{-- <li class="offcanvas__menu_li">
-                                <a class="offcanvas__menu_item" href="about-1.html">About</a>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="{{ route('training.placement') }}">Training and
+                                    Placement</a>
+                            </li>
+                             <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="#">More</a>
                                 <ul class="offcanvas__sub_menu">
                                     <li class="offcanvas__sub_menu_li">
-                                        <a href="about-1.html" class="offcanvas__sub_menu_item">About One</a>
+                                        <a href="{{ route('contact') }}" class="offcanvas__sub_menu_item">Contact</a>
                                     </li>
                                     <li class="offcanvas__sub_menu_li">
-                                        <a href="about-2.html" class="offcanvas__sub_menu_item">About Two</a>
+                                        <a href="{{ route('network') }}" class="offcanvas__sub_menu_item">Network</a>
                                     </li>
                                 </ul>
-                            </li> --}}
-
-                            <li class="offcanvas__menu_li">
-                                <a class="offcanvas__menu_item" href="{{ route('training.placement') }}">Training and Placement</a>
-                            </li>
-                            <li class="offcanvas__menu_li">
-                                <a class="offcanvas__menu_item" href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -178,37 +177,8 @@
                                 +91 {{ $CompanyPhone1 }}
                             </a>
                         </li>
-
-                        {{-- <li>
-                            <a href="https://www.twitter.com/" target="_blank" style="color:#fff;">
-                                <img src="/assets/images/icons/icon-white-message.svg" alt="icon-white-message.svg" />
-                                infotech@gmail.com
-                            </a>
-                        </li> --}}
                     </ul>
                 </div>
-
-                <!-- Category Dropdown -->
-                {{-- <div class="ed-topbar__search-widget">
-                    <div class="ed-topbar__category">
-                        <select>
-                            <option data-display="All Categories">All Categories</option>
-                            <option value="1">Business</option>
-                            <option value="2">Marketing</option>
-                            <option value="3">Design</option>
-                            <option value="4">Finance</option>
-                            <option value="5">Lifestyle</option>
-                            <option value="6">Development</option>
-                            <option value="7">Photography</option>
-                        </select>
-                    </div>
-                    <div class="ed-topbar__search">
-                        <form action="#" method="post">
-                            <input type="search" name="search" placeholder="Search your courses..." required />
-                            <button type="submit">Search<i class="fi-rr-search"></i></button>
-                        </form>
-                    </div>
-                </div> --}}
 
                 <!-- Topbar Info -->
                 <div class="ed-topbar__info">
@@ -230,14 +200,6 @@
                         </li>
                     </ul>
                     <!-- Topbar Button -->
-                    <div class="ed-topbar__info-buttons">
-                        {{-- <a href="#" class="register-btn">
-                            Register
-                        </a>
-                        <a href="#" class="login-btn">
-                            Log In
-                        </a> --}}
-                    </div>
 
                 </div>
             </div>
@@ -297,6 +259,7 @@
                                     <li><a href="{{ route('student.result') }}">View Result</a></li>
                                     <li><a href="{{ asset('assets/images/admision-form.pdf') }}"
                                             target="_blank">Admission Form</a></li>
+                                    <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -308,18 +271,15 @@
                                     </li>
                                 </ul>
                             </li>
-                            {{-- <li>
-                                <a href="javascript:void(0)">About<i class="fi fi-ss-angle-small-down"></i></a>
-                                <ul class="sub-menu">
-                                    <li><a href="about-1.html">About One </a></li>
-                                    <li><a href="about-2.html">About Two</a></li>
-                                </ul>
-                            </li> --}}
                             <li>
                                 <a href="{{ route('training.placement') }}">Training and Placement</a>
                             </li>
                             <li>
-                                <a href="{{ route('contact') }}">Contact</a>
+                                <a href="javascript:void(0)">More<i class="fi fi-ss-angle-small-down"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('contact') }}">Contact </a></li>
+                                    <li><a href="{{ route('network') }}">Network</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>

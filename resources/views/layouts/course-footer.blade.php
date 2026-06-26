@@ -1,5 +1,5 @@
                  <!-- Start Call Action Area -->
-                 <section class="ed-call-action position-relative">
+                 {{-- <section class="ed-call-action position-relative">
                      <div class="container ed-container">
                          <div class="ed-call-action__inner position-relative">
                              <div class="ed-call-action__shapes">
@@ -52,7 +52,7 @@
                              </div>
                          </div>
                      </div>
-                 </section>
+                 </section> --}}
                  <!-- End Call Action Area -->
                  <!-- Start Footer Area -->
                  <footer class="ed-footer section-bg-color-1 position-relative">
@@ -103,7 +103,10 @@
                                          <ul class="ed-footer__widget-links">
                                              <li><a href="{{ route('about') }}">About Us</a></li>
                                              <li><a href="{{ route('courses') }}">Courses</a></li>
-                                             <li><a href="{{ route('training.placement') }}">Training and Placement</a></li>
+                                             <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                                             <li><a href="{{ route('training.placement') }}">Training and Placement</a>
+                                             </li>
+                                             <li><a href="{{ route('network') }}">Network</a></li>
                                              <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                          </ul>
                                      </div>
@@ -139,7 +142,7 @@
                                              </div>
                                              <div class="ed-footer__contact-info">
                                                  <span>24/7 Support</span>
-                                                 <a href="tel:{{ $CompanyPhone1 }}">{{ $CompanyPhone1 }}</a>
+                                                 <a href="tel:{{ $CompanyPhone1 }}">+91 {{ $CompanyPhone1 }}</a>
                                              </div>
                                          </div>
                                          <!-- Single Info  -->

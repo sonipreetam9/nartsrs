@@ -82,9 +82,9 @@
                                 <!-- Title -->
                                 <div class="text-center mb-5">
 
-                                    <h3 class="mb-3">
+                                    <h2 class="mb-3">
                                         Department of Management
-                                    </h3>
+                                    </h2>
 
                                     <p style="max-width:900px;margin:auto;">
                                         Management is the administration of an organization,

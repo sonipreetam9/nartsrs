@@ -2,7 +2,7 @@
     Start Footer CSS
 ===================================================================================================*/
 .ed-footer__top {
-  padding: 288px 0px 110px;
+  padding: 100px 0px 100px;
 }
 .ed-footer__logo img {
   max-width: 140px;
@@ -170,7 +170,7 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .ed-footer__top {
-    padding: 110px 0px 110px;
+    padding: 100px 0px 100px;
   }
   .ed-footer__shape-2 {
     display: none;

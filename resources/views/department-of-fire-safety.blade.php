@@ -82,9 +82,9 @@
                                     <!-- Title -->
                                     <div class="text-center mb-5">
 
-                                        <h3 class="mb-3">
+                                        <h2 class="mb-3">
                                             Department of Fire Safety
-                                        </h3>
+                                        </h2>
 
                                         <p style="max-width:900px;margin:auto;">
                                             Fire safety is the set of practices intended to reduce the destruction caused by
