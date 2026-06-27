@@ -43,85 +43,6 @@
 </section> --}}
 <!-- End Call Action Area -->
 
-<!-- Start Register Modal -->
-<div class="modal fade ed-auth__modal" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="ed-auth__modal-content modal-content">
-            <button type="button" class="ed-auth__modal-close" data-bs-dismiss="modal" aria-label="Close">
-                <i class="fi-rr-cross"></i>
-            </button>
-
-            <!-- Auth Head  -->
-            <div class="ed-auth__modal-head">
-                <a href="index.html" class="ed-auth__modal-logo">
-                    <img src="assets/images/logo.svg" alt="logo" />
-                </a>
-                <h3 class="ed-auth__modal-title">Sign Up Now</h3>
-                <p class="ed-auth__modal-text">
-                    already have an account?
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Sign In
-                    </button>
-                </p>
-            </div>
-
-            <!-- Auth Body  -->
-            <div class="ed-auth__modal-body">
-                <form action="#" method="post" class="ed-auth__modal-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Enter name" required />
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" name="user name" placeholder="Enter user name" required />
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Enter email" required />
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" name="password" placeholder="Enter password" required />
-                    </div>
-
-                    <div class="form-check">
-                        <label class="form-check-label" for="flexCheckDefault2">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-                            I agree with your <strong>Privacy Policy</strong>
-                        </label>
-                    </div>
-                    <div class="ed-auth__form-btn">
-                        <button type="submit" class="ed-btn">Register Now<i
-                                class="fi fi-rr-arrow-small-right"></i></button>
-                    </div>
-                </form>
-            </div>
-            <!-- Auth Footer  -->
-            <div class="ed-auth__modal-footer">
-                <div class="ed-auth__modal-third-party">
-                    <p>Or Sign Up with</p>
-                    <ul class="ed-auth__modal-third-party-list">
-                        <li>
-                            <a class="google-login" href="https://www.google.com/"><img
-                                    src="assets/images/icons/icon-color-google.svg" alt="icon-color-google" /></a>
-                        </li>
-
-                        <li>
-                            <a class="facebook-login" href="https://facebook.com/"><img
-                                    src="assets/images/icons/icon-color-facebook.svg" alt="icon-color-facebook" /></a>
-                        </li>
-                        <li>
-                            <a class="linkedin-login" href="https://www.linkedin.com/"><img
-                                    src="assets/images/icons/icon-color-linkedin.svg" alt="icon-color-linkedin" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Register Modal -->
 
 <!-- Start Footer Area -->
 <footer class="ed-footer section-bg-color-1 position-relative">
@@ -166,7 +87,7 @@
                             <li><a href="{{ route('courses') }}">Courses</a></li>
                             <li><a href="{{ route('gallery') }}">Gallery</a></li>
                             <li><a href="{{ route('training.placement') }}">Training and Placement</a></li>
-                            <li><a href="{{ route('network') }}">Training and Placement</a></li>
+                            <li><a href="{{ route('network') }}">Network</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                         </ul>
                     </div>

@@ -5461,7 +5461,7 @@ fieldset:disabled .btn {
     left: 0;
     z-index: var(--bs-backdrop-zindex);
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: var(--bs-backdrop-bg);
 }
 .modal-backdrop.fade {

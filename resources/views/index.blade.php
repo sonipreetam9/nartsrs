@@ -813,7 +813,7 @@
                                                 </ul>
                                                 <p class="ed-testimonial__text">
                                                     "I’m grateful to NART for providing such a professional course in
-                                                   DIPLOMA IN MECHANICAL ENGINEERING.
+                                                    DIPLOMA IN MECHANICAL ENGINEERING.
                                                     The hands-on practice sessions were very helpful for my future career."
                                                 </p>
                                             </div>
@@ -894,7 +894,7 @@
                                                     <li><i class="icofont-star"></i></li>
                                                 </ul>
                                                 <p class="ed-testimonial__text">
-                                                    "NART’s DIPLOMA IN FITTER MECHANIC  programs are truly job-oriented.
+                                                    "NART’s DIPLOMA IN FITTER MECHANIC programs are truly job-oriented.
                                                     I gained practical exposure that made me confident to start working
                                                     immediately."
                                                 </p>
@@ -910,7 +910,7 @@
                                                     </div>
                                                     <div class="ed-testimonial__author-info">
                                                         <h5>Manju Rani</h5>
-                                                        <p>DIPLOMA IN COMPUTER APPLICATIONS  </p>
+                                                        <p>DIPLOMA IN COMPUTER APPLICATIONS </p>
                                                     </div>
                                                 </div>
                                                 <ul class="ed-testimonial__rattings">
@@ -921,7 +921,8 @@
                                                     <li><i class="icofont-star"></i></li>
                                                 </ul>
                                                 <p class="ed-testimonial__text">
-                                                    "NART’s DIPLOMA IN COMPUTER APPLICATIONS  programs are truly job-oriented.
+                                                    "NART’s DIPLOMA IN COMPUTER APPLICATIONS programs are truly
+                                                    job-oriented.
                                                     I gained practical exposure that made me confident to start working
                                                     immediately."
                                                 </p>
@@ -937,7 +938,7 @@
                                                     </div>
                                                     <div class="ed-testimonial__author-info">
                                                         <h5>Sumit Kumar</h5>
-                                                        <p>DIPLOMA IN COMPUTER APPLICATION  </p>
+                                                        <p>DIPLOMA IN COMPUTER APPLICATION </p>
                                                     </div>
                                                 </div>
                                                 <ul class="ed-testimonial__rattings">
@@ -948,7 +949,7 @@
                                                     <li><i class="icofont-star"></i></li>
                                                 </ul>
                                                 <p class="ed-testimonial__text">
-                                                    "NART’s DIPLOMA IN COMPUTER APPLICATION  programs are truly job-oriented.
+                                                    "NART’s DIPLOMA IN COMPUTER APPLICATION programs are truly job-oriented.
                                                     I gained practical exposure that made me confident to start working
                                                     immediately."
                                                 </p>
@@ -967,6 +968,75 @@
                     </div>
                 </section>
                 <!-- End Testimonial Area -->
+
             </main>
 
+
+            
+            <!-- Start Register Modal -->
+            <div class="modal fade ed-auth__modal" id="welcomeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="ed-auth__modal-content modal-content">
+                        <button type="button" class="ed-auth__modal-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fi-rr-cross"></i>
+                        </button>
+
+                        <!-- Auth Head  -->
+                        <div class="ed-auth__modal-head">
+                        {{-- <a href="{{ route('index') }}" class="ed-auth__modal-logo">
+                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo" />
+                        </a> --}}
+                        <h3 class="ed-auth__modal-title">Enquiry Now</h3>
+                        {{-- <p class="ed-auth__modal-text">
+                            already have an account?
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Sign In
+                            </button>
+                        </p> --}}
+                    </div>
+
+                        <!-- Auth Body  -->
+                        <div class="ed-auth__modal-body">
+                            <form action="{{ route('contact.form.post') }}" method="POST" class="ed-auth__modal-form">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Enter Name" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Enter Phone" maxlengt="10" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Enter Email" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="subject" placeholder="Enter Subject" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea id="message" name="message" placeholder="Enter Message"></textarea>
+                                </div>
+                                <div class="ed-auth__form-btn">
+                                    <button type="submit" class="ed-btn">Submit<i
+                                            class="fi fi-rr-arrow-small-right"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Register Modal -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                
+                        setTimeout(function() {
+                            var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+                            myModal.show();
+                            localStorage.setItem("welcomePopupShown", "true");
+                        }, 2000);
+                });
+            </script>
         @endsection

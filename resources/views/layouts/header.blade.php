@@ -55,7 +55,7 @@
             <div class="modal-content">
                 <div class="modal-header offcanvas-header">
                     <div class="offcanvas-logo">
-                        <a href="{{ route('index') }}"><img src="assets/images/logo.png" alt="NART" /></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/images/logo.png') }}" alt="NART" /></a>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <i class="fi fi-ss-cross"></i>
@@ -327,6 +327,7 @@
                                 </ul>
                             </li>
                         </ul>
+                        
                     </nav>
                 </div>
 

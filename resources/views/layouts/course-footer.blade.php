@@ -104,8 +104,7 @@
                                              <li><a href="{{ route('about') }}">About Us</a></li>
                                              <li><a href="{{ route('courses') }}">Courses</a></li>
                                              <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                                             <li><a href="{{ route('training.placement') }}">Training and Placement</a>
-                                             </li>
+                                             <li><a href="{{ route('training.placement') }}">Training and Placement</a></li>
                                              <li><a href="{{ route('network') }}">Network</a></li>
                                              <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                          </ul>
